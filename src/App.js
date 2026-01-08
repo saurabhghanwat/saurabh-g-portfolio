@@ -239,7 +239,14 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 1.0 }}
               className="space-y-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
             >
-              <button className="btn-primary w-full sm:w-auto">
+               <button
+                type="button"
+                className="btn-primary w-full sm:w-auto"
+                onClick={() => {
+                  const el = document.getElementById('contact');
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 Contact
               </button>
               
@@ -690,7 +697,7 @@ const Projects = () => {
         "Simplified customer and payment management through centralized dashboards. Saved time on daily reconciliation with ready-to-export reports."
       ],
       impact: "Streamlined end-to-end laundry operations from order intake to delivery. Reduced manual tracking errors and improved order visibility through tagging and status tracking. Enhanced customer satisfaction with timely notifications and faster turnaround. Enabled laundry owners to clearly understand customer value and business performance. Improved operational control and decision-making through dashboards and reports.",
-      image: `${process.env.PUBLIC_URL}/work_experience/washmart.jpeg`,
+      image: `${process.env.PUBLIC_URL}/work_experience/Washmart.jpeg`,
       emoji: "👕"
     },
     {
