@@ -35,6 +35,7 @@ import {
   SiPostman,
   SiOracle
 } from 'react-icons/si';
+import excellenceAward2 from './assets/Excellence2.jpg';
 import excellenceAward from './assets/Excellence.jpg';
 import patAward1 from './assets/PatQ1.jpg';
 import patAward2 from './assets/PatQ2.jpg';
@@ -220,7 +221,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-            Backend engineer with 5.5+ years of hands-on experience building scalable systems using Java, Spring Boot, and microservices architecture. Strong in databases, API gateways, CI/CD pipelines, message queues, and cloud platforms.
+            Backend engineer with 6+ years of hands-on experience building scalable systems using Java, Spring Boot, and microservices architecture. Strong in databases, API gateways, CI/CD pipelines, message queues, and cloud platforms.
             </motion.p>
             
             <motion.div
@@ -285,7 +286,7 @@ const Hero = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-primary rounded-full transform rotate-12 scale-110 opacity-20 animate-glow"></div>
               <img
-                src={`${process.env.PUBLIC_URL}/work_experience/Profile3.png`}
+                src={`${process.env.PUBLIC_URL}/work_experience/Profile3.jpg`}
                 alt="Saurabh Ghanwat"
                 className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full object-cover shadow-large border-4 border-primary/30"
               />
@@ -341,7 +342,7 @@ Focused on backend application development, database management, operating syste
                 <h3 className="text-xl sm:text-2xl font-semibold text-white">Experience</h3>
               </div>
               <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
-                5.5+ years of hands-on experience in building backend applications using Java, Spring Boot, and microservices. 
+                6+ years of hands-on experience in building backend applications using Java, Spring Boot, and microservices. 
                 Experienced in both startups and large companies like L&T Infotech, and currently contributing to banking domain at HSBC. 
               </p>
             </div>
@@ -982,8 +983,15 @@ const Experience = () => {
       achievements: [
         {
           text: "Recognized with the ",
-          awardName: "Circle Of Excellence",
-          afterText: " award for driving innovation in registry data architecture",
+          awardName: "Circle Of Excellence Q1 2026",
+          afterText: " award for driving innovation in HSBCNet and delivering impactful solutions",
+          image: excellenceAward2,
+          hasImage: true
+        },
+        {
+          text: "Recognized with the ",
+          awardName: "Circle Of Excellence Q3 2025",
+          afterText: " award for driving innovation in HSBCNet and delivering impactful solutions",
           image: excellenceAward,
           hasImage: true
         },
@@ -1170,6 +1178,13 @@ const Recognitions = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const recognitions = [
+    {
+      title: "Circle Of Excellence",
+      issuer: "HSBC",
+      icon: SiSpringboot,
+      color: "primary",
+      image: `${process.env.PUBLIC_URL}/certificates/Excellence2.jpg`
+    },
     {
       title: "Circle Of Excellence",
       issuer: "HSBC",
