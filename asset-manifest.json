@@ -1,18 +1,19 @@
 {
   "files": {
     "main.css": "/saurabh-g-portfolio/static/css/main.af7c70ae.css",
-    "main.js": "/saurabh-g-portfolio/static/js/main.ec651959.js",
+    "main.js": "/saurabh-g-portfolio/static/js/main.9ba493e3.js",
     "static/media/Excellence.jpg": "/saurabh-g-portfolio/static/media/Excellence.3a03b8be3f4abffbda69.jpg",
     "static/media/Excellence2.jpg": "/saurabh-g-portfolio/static/media/Excellence2.8cd5eb45d488b3a17b6f.jpg",
     "static/media/PatQ1.jpg": "/saurabh-g-portfolio/static/media/PatQ1.376a670c2f0ed50f9a46.jpg",
     "static/media/PatQ2.jpg": "/saurabh-g-portfolio/static/media/PatQ2.ce5ba317871d26dcf53c.jpg",
-    "static/media/AOB.png": "/saurabh-g-portfolio/static/media/AOB.785abbc6be024ee337ff.png",
+    "static/media/AOB.png": "/saurabh-g-portfolio/static/media/AOB.b970d679c0244c649245.png",
+    "static/media/AOB2.png": "/saurabh-g-portfolio/static/media/AOB2.e79b8dbd385a357e612e.png",
     "index.html": "/saurabh-g-portfolio/index.html",
     "main.af7c70ae.css.map": "/saurabh-g-portfolio/static/css/main.af7c70ae.css.map",
-    "main.ec651959.js.map": "/saurabh-g-portfolio/static/js/main.ec651959.js.map"
+    "main.9ba493e3.js.map": "/saurabh-g-portfolio/static/js/main.9ba493e3.js.map"
   },
   "entrypoints": [
     "static/css/main.af7c70ae.css",
-    "static/js/main.ec651959.js"
+    "static/js/main.9ba493e3.js"
   ]
 }
