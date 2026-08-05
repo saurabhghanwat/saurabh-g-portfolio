@@ -35,6 +35,7 @@ import {
   SiPostman,
   SiOracle
 } from 'react-icons/si';
+import starAward from './assets/Star.jpg';
 import excellenceAward2 from './assets/Excellence2.jpg';
 import excellenceAward from './assets/Excellence.jpg';
 import patAward1 from './assets/PatQ1.jpg';
@@ -982,6 +983,13 @@ const Experience = () => {
         "Migrated 3 enterprise APIs from MuleSoft to Spring Boot, optimizing backend integration and improving system performance and reliability.",
       ],
       achievements: [
+        {
+          text: "Recognized with the ",
+          awardName: "Star Performer Q2 2026",
+          afterText: " award for driving innovation in HSBCNet and delivering impactful solutions",
+          image: starAward,
+          hasImage: true
+        },
         {
           text: "Recognized with the ",
           awardName: "Circle Of Excellence Q1 2026",
