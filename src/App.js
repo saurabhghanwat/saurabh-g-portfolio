@@ -33,7 +33,20 @@ import {
   SiKibana,
   SiSonarqube,
   SiPostman,
-  SiOracle
+  SiOracle,
+  SiGithub,
+  SiDocker,
+  SiApachemaven,
+  SiRedis,
+  SiElasticsearch,
+  SiApachekafka,
+  SiRabbitmq,
+  SiKubernetes,
+  SiJenkins,
+  SiOpenai,
+  SiDatadog,
+  SiApachejmeter,
+  SiHibernate
 } from 'react-icons/si';
 import starAward from './assets/Star.jpg';
 import excellenceAward2 from './assets/Excellence2.jpg';
@@ -221,9 +234,9 @@ const Hero = () => {
               className="text-base sm:text-lg text-gray-400 leading-relaxed max-w-2xl mx-auto lg:mx-0"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              transition  ={{ duration: 0.8, delay: 0.6 }}
             >
-            Backend engineer with 6.8+ years of hands-on experience building scalable systems using Java, Spring Boot, and microservices architecture. Strong in databases, API gateways, CI/CD pipelines, message queues, and cloud platforms.
+            Backend Engineer with 6.8+ years of experience building scalable systems using Java, Spring Boot, and Microservices. Skilled in REST APIs, databases, CI/CD, message queues, and cloud platforms. Proficient with GitHub Copilot, ChatGPT, Claude and IntelliJ AI Assistant to accelerate development, debugging, testing, and documentation.
             </motion.p>
             
             <motion.div
@@ -393,49 +406,59 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      title: "SPringboot",
+      title: "Backend Development",
       color: "primary",
       skills: [
-        { name: "Java", icon: FaJava, level: 90 },
-        { name: "Springboot", icon: SiSpringboot, level: 90 },
-        { name: "Spring Security", icon: SiSpringboot, level: 88 },
+        { name: "Java 17/21", icon: FaJava, level: 90 },
+        { name: "Spring boot", icon: SiSpringboot, level: 90 },
+        { name: "Spring MVC", icon: SiSpringboot, level: 88 },
         { name: "Spring Data JPA", icon: SiSpringboot, level: 85 },
-        { name: "Microservices", icon: SiSpringboot, level: 90 },
-        { name: "RESTful APIs", icon: SiSpringboot, level: 90 },
+        { name: "Spring Security", icon: SiSpringboot, level: 90 },
+        { name: "Hibernate", icon: SiHibernate, level: 90 },
+        { name: "JWT", icon: SiSpringboot, level: 90 },
+        { name: "Restful APIs", icon: SiSpringboot, level: 90 },
       ]
     },
     {
-      title: "Databases",
+      title: "Databases & Messaging",
       color: "primary",
       skills: [
         { name: "MySQL", icon: DiMysql, level: 88 },
         { name: "PostgreSQL", icon: DiPostgresql, level: 90 },
         { name: "OracleDB", icon: SiOracle, level: 87 },
         { name: "MongoDB", icon: DiMongodb, level: 85 },
-        { name: "S3", icon: FaDatabase, level: 80 },
+        { name: "Redis", icon: SiRedis, level: 85 },
+        { name: "Elasticsearch", icon: SiElasticsearch, level: 85 },
+        { name: "Apache Kafka", icon: SiApachekafka, level: 85 },
+        { name: "RabbitMQ", icon: SiRabbitmq, level: 85 },
       ]
     },
     {
-      title: "Cloud & Monitoring",
+      title: "DevOps & Cloud",
       color: "primary",
       skills: [
         { name: "Google Cloud", icon: SiGooglecloud, level: 85 },
-        { name: "AppDynamics", icon: FaChartBar, level: 85 },
-        { name: "Splunk", icon: SiSplunk, level: 90 },
-        { name: "Kibana", icon: SiKibana, level: 87 },
+        { name: "Docker", icon: SiDocker, level: 85 },
+        { name: "Kubernetes", icon: SiKubernetes, level: 90 },
+        { name: "Jenkins", icon: SiJenkins, level: 87 },
+        { name: "Git", icon: SiGithub, level: 87 },
+        { name: "Maven", icon: SiApachemaven, level: 87 },
+        { name: "AppDynamics", icon: SiApachespark, level: 87 },
         { name: "SonarQube", icon: SiSonarqube, level: 87 },
       ]
     },
     {
-      title: "GenAI & Tools",
+      title: "APIs, Monitoring & AI ",
       color: "primary",
       skills: [
         { name: "Github Copilot", icon: GoCopilot, level: 95 },
-        { name: "GenAI", icon: FaRocket, level: 90 },
-        { name: "IntelliJ", icon: DiIntellij, level: 90 },
+        { name: "ChatGPT", icon: SiOpenai, level: 90 },
+        { name: "Cloude", icon: FaRocket, level: 90 },
         { name: "Postman/Insomnia", icon: SiPostman, level: 87 },
-        { name: "Jenkins", icon: DiJenkins, level: 80 },
-        { name: "Docker", icon: DiDocker, level: 85 },
+        { name: "Splunk", icon: SiSplunk, level: 80 },
+        { name: "Kibana", icon: SiKibana, level: 85 },
+        { name: "Datadog", icon: SiDatadog, level: 85 },
+        { name: "JMeter", icon: SiApachejmeter, level: 85 },
       ]
     }
   ];
@@ -612,16 +635,24 @@ const Projects = () => {
           description: "Built AI Powered chatbot for customer support using Copilot Studio. It was responsible for handling basic customer queries and redirect to Human Agent power specific area queries."
         },
         {
-          title: "2. Request For Information Feature", 
+          title: "2. Amplify HSBC Content", 
+          description: "Designed and developed a Python automation utility leveraging AI-assisted development tools. Deployed the solution for global use across HSBC to streamline operational workflows. Eliminated repetitive manual tasks, saving **133+ hours** of human effort while improving productivity and accuracy."
+        },
+        {
+          title: "3. Request For Information Feature", 
           description: "Developed the RFI (Request for Information) feature enabling seamless communication between the bank's back office and customers during payment processing, improving query resolution and operational efficiency."
         },
         {
-          title: "3. Replay Mechanism",
+          title: "4. Replay Mechanism",
           description: "Built a robust replay mechanism using batch jobs to reprocess failed asynchronous thirdparty calls, significantly enhancing system resilience and error recovery. "
         },
         {
-          title: "4. MuleSoft To Springboot Migration",
+          title: "5. MuleSoft To Springboot Migration",
           description: "Migrated 3 enterprise APIs from MuleSoft to Spring Boot, optimizing backend integration and improving system performance and reliability."
+        },
+        {
+          title: "6. Click To Call Feature",
+          description: "Developed backend APIs for the Click-to-Call feature to support customers in France. Enabled users to connect with French-speaking support agents instead of the previous English-only support."
         }
       ],
       optimizations: [
@@ -977,6 +1008,8 @@ const Experience = () => {
       image: `${process.env.PUBLIC_URL}/work_experience/DePaul.jpeg`,
       project: "HSBCNet Application",
       details: [
+        "Built AI Powered chatbot for customer support using Copilot Studio. It was responsible for handling basic customer queries and redirect to Human Agent power specific area queries.",
+        "Developed an AI-assisted Python automation utility adopted globally across HSBC. Automated manual workflows, saving 133+ hours of human effort and improving operational efficiency.",
         "Created and managed Jenkins pipelines for CI/CD automation, deployed applications on Kubernetes clusters and Google Cloud Platform (GCP. Created Change Request, performed production deployments and provided support during production releases. Monitored application health and performance using Splunk, Kibana logs, and AppDynamics. ",
         "Built a robust replay mechanism using batch jobs to reprocess failed asynchronous third party calls, significantly enhancing system resilience and error recovery.",
         "Developed the RFI (Request for Information) feature enabling seamless communication between the bank's back office and customers during payment processing, improving query resolution and operational efficiency. ",
@@ -1128,7 +1161,7 @@ const Experience = () => {
                   )}
                   
                   <div className="space-y-2">
-                    {exp.details?.slice(0, 3).map((detail, index) => (
+                    {exp.details?.slice(0, 5).map((detail, index) => (
                       <div key={index} className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                         <p className="text-gray-300 leading-relaxed text-xs sm:text-sm">{detail}</p>
