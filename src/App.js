@@ -39,7 +39,8 @@ import excellenceAward2 from './assets/Excellence2.jpg';
 import excellenceAward from './assets/Excellence.jpg';
 import patAward1 from './assets/PatQ1.jpg';
 import patAward2 from './assets/PatQ2.jpg';
-import aobAward from './assets/AOB.png';
+import aobAward1 from './assets/AOB.png';
+import aobAward2 from './assets/AOB2.png';
 import { GoCopilot } from 'react-icons/go';
 import { DiDocker, DiIntellij, DiJenkins, DiMongodb, DiMysql, DiPostgresql } from 'react-icons/di';
 
@@ -221,7 +222,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-            Backend engineer with 6+ years of hands-on experience building scalable systems using Java, Spring Boot, and microservices architecture. Strong in databases, API gateways, CI/CD pipelines, message queues, and cloud platforms.
+            Backend engineer with 6.8+ years of hands-on experience building scalable systems using Java, Spring Boot, and microservices architecture. Strong in databases, API gateways, CI/CD pipelines, message queues, and cloud platforms.
             </motion.p>
             
             <motion.div
@@ -286,7 +287,7 @@ const Hero = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-primary rounded-full transform rotate-12 scale-110 opacity-20 animate-glow"></div>
               <img
-                src={`${process.env.PUBLIC_URL}/work_experience/Profile3.jpg`}
+                src={`${process.env.PUBLIC_URL}/work_experience/Profile4.jpg`}
                 alt="Saurabh Ghanwat"
                 className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full object-cover shadow-large border-4 border-primary/30"
               />
@@ -342,7 +343,7 @@ Focused on backend application development, database management, operating syste
                 <h3 className="text-xl sm:text-2xl font-semibold text-white">Experience</h3>
               </div>
               <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
-                6+ years of hands-on experience in building backend applications using Java, Spring Boot, and microservices. 
+                6.8+ years of hands-on experience in building backend applications using Java, Spring Boot, and microservices. 
                 Experienced in both startups and large companies like L&T Infotech, and currently contributing to banking domain at HSBC. 
               </p>
             </div>
@@ -1013,7 +1014,14 @@ const Experience = () => {
           text: "Received ",
           awardName: "AOB Recognition",
           afterText: " from leadership for excellent work",
-          image: aobAward,
+          image: aobAward2,
+          hasImage: true
+        },
+        {
+          text: "Received ",
+          awardName: "AOB Recognition",
+          afterText: " from leadership for excellent work",
+          image: aobAward1,
           hasImage: true
         },
       ]
@@ -1179,6 +1187,13 @@ const Recognitions = () => {
 
   const recognitions = [
     {
+      title: "Star Performer",
+      issuer: "HSBC",
+      icon: SiSpringboot,
+      color: "primary",
+      image: `${process.env.PUBLIC_URL}/certificates/Star.jpg`
+    },
+    {
       title: "Circle Of Excellence",
       issuer: "HSBC",
       icon: SiSpringboot,
@@ -1205,6 +1220,13 @@ const Recognitions = () => {
       icon: SiSpringboot,
       color: "primary",
       image: `${process.env.PUBLIC_URL}/certificates/PatQ2.jpg`
+    },
+       {
+      title: "AOB Recognition",
+      issuer: "HSBC",
+      icon: SiSpringboot,
+      color: "primary",
+      image: `${process.env.PUBLIC_URL}/certificates/AOB2.png`
     },
     {
       title: "AOB Recognition",
