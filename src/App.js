@@ -55,6 +55,13 @@ import patAward1 from './assets/PatQ1.jpg';
 import patAward2 from './assets/PatQ2.jpg';
 import aobAward1 from './assets/AOB.png';
 import aobAward2 from './assets/AOB2.png';
+import soham1 from './assets/soham/soham1.png';
+import soham2 from './assets/soham/soham2.png';
+import soham3 from './assets/soham/soham3.png';
+import soham4 from './assets/soham/soham4.png';
+import soham5 from './assets/soham/soham5.png';
+import soham6 from './assets/soham/soham6.png';
+import soham7 from './assets/soham/soham7.png';
 import { GoCopilot } from 'react-icons/go';
 import { DiDocker, DiIntellij, DiJenkins, DiMongodb, DiMysql, DiPostgresql } from 'react-icons/di';
 
@@ -186,7 +193,7 @@ const Navigation = () => {
 // Hero Section
 const Hero = () => {
   const [text, setText] = useState('');
-  const fullText = "Sr. Software Engineer | Backend";
+  const fullText = "Java Full Stack Engineer";
 
   useEffect(() => {
     let i = 0;
@@ -385,7 +392,7 @@ Focused on backend application development, database management, operating syste
               <div className="absolute inset-4 bg-dark-card rounded-full flex items-center justify-center shadow-large border border-primary/30">
                 <div className="text-center">
                   <div className="text-4xl sm:text-6xl mb-4">👨‍💻</div>
-                  <p className="text-lg sm:text-xl font-semibold gradient-text">Sr. Software Engineer</p>
+                  <p className="text-lg sm:text-xl font-semibold gradient-text">Java Full Stack Engineer</p>
                   <p className="text-gray-300 text-sm sm:text-base">Backend Developer</p>
                 </div>
               </div>
@@ -887,6 +894,174 @@ const Projects = () => {
           onClose={closeModal}
           project={selectedProject}
         />
+      </div>
+    </section>
+  );
+};
+
+// Vibe Coding Projects Section
+const VibeCoding = () => {
+  const [ref, inView] = useInView({
+    threshold: 0.1,
+    triggerOnce: true,
+  });
+  const [selectedExperience, setSelectedExperience] = useState(null);
+  const [selectedScreenshot, setSelectedScreenshot] = useState(0);
+
+  const projects = [
+    {
+      title: 'Trending Music Player',
+      type: 'Interactive web experience',
+      description: 'A polished music discovery and player experience built through AI-assisted UI exploration.',
+      accent: 'MUSIC',
+      emoji: '🎵',
+      href: 'https://tractordriver.vercel.app/',
+    },
+    {
+      title: 'Shriram Aluminium Works',
+      type: 'Business website',
+      description: 'A clear, modern online presence designed to showcase aluminium products and services.',
+      accent: 'INDUSTRY',
+      emoji: '⚙️',
+      href: 'https://shriramaluminiumworks.vercel.app/',
+    },
+    {
+      title: 'Lights, Camera, Guess!',
+      type: 'Movie guessing game',
+      description: 'A playful movie-name challenge with an engaging, game-first interface.',
+      accent: 'PLAY',
+      emoji: '🎬',
+      href: 'https://lightscameraguess.vercel.app/',
+    },
+    {
+      title: 'Soham Yoga Centre',
+      type: 'Custom desktop application',
+      description: 'A tailored desktop workflow app created for a yoga centre, designed around its daily operations.',
+      accent: 'DESKTOP',
+      emoji: '🧘',
+      screenshots: [soham1, soham2, soham3, soham4, soham5, soham6, soham7],
+    },
+  ];
+
+  return (
+    <section className="py-20 bg-dark-bg" ref={ref}>
+      <div className="container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <p className="text-primary font-semibold text-sm tracking-widest mb-3">AI-ASSISTED UI WORK</p>
+          <h2 className="section-title">Vibe Coding Lab</h2>
+          <p className="section-subtitle">Interface experiments that expanded my frontend and full stack perspective.</p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          {projects.map((project, index) => {
+            const content = (
+              <>
+                <div className="relative h-44 mb-5 overflow-hidden rounded-lg border border-gray-700 bg-dark-bg flex items-center justify-center">
+                  <div className="text-center">
+                    <span className="block text-6xl mb-3">{project.emoji}</span>
+                    <span className="text-primary font-bold text-xs tracking-widest">{project.accent}</span>
+                  </div>
+                  <span className="absolute top-3 right-3 bg-dark-card/90 text-primary border border-primary/40 rounded-full px-3 py-1 text-xs font-semibold">
+                    {project.accent}
+                  </span>
+                </div>
+                <p className="text-primary text-xs font-semibold uppercase tracking-wider mb-2">{project.type}</p>
+                <h3 className="text-xl font-bold text-white mb-3 transition-colors duration-300 group-hover:text-primary">{project.title}</h3>
+                <p className="text-gray-300 text-sm leading-relaxed flex-grow">{project.description}</p>
+                <div className="mt-5 flex items-center justify-between text-sm font-semibold">
+                  <span className="text-primary">{project.href ? 'Open experience' : 'Desktop build'}</span>
+                  <span className="text-primary text-lg transition-transform duration-300 group-hover:translate-x-1">→</span>
+                </div>
+              </>
+            );
+
+            return (
+              <motion.div
+                key={project.title}
+                initial={{ opacity: 0, y: 40 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="card project-card-hover overflow-hidden"
+              >
+                {project.href ? (
+                  <a href={project.href} target="_blank" rel="noopener noreferrer" className="group flex h-full flex-col p-5 cursor-pointer">
+                    {content}
+                  </a>
+                ) : (
+                  <button
+                    type="button"
+                    className="group flex h-full w-full flex-col p-5 text-left"
+                    onClick={() => {
+                      setSelectedExperience(project);
+                      setSelectedScreenshot(0);
+                    }}
+                  >
+                    {content}
+                  </button>
+                )}
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {selectedExperience && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"
+            onClick={() => setSelectedExperience(null)}
+          >
+            <div
+              className="card relative max-h-[90vh] w-full max-w-5xl overflow-y-auto p-5 sm:p-8"
+              onClick={(event) => event.stopPropagation()}
+            >
+              <button
+                type="button"
+                aria-label="Close experience details"
+                onClick={() => setSelectedExperience(null)}
+                className="absolute right-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-primary text-xl text-white transition-colors hover:bg-secondary"
+              >
+                ×
+              </button>
+              <div className="pr-10">
+                <div className="mb-2 text-4xl">{selectedExperience.emoji}</div>
+                <h3 className="text-2xl font-bold text-white sm:text-3xl">{selectedExperience.title}</h3>
+                <p className="mt-2 text-gray-300">{selectedExperience.description}</p>
+              </div>
+              <div className="relative mt-6">
+                <img
+                  src={selectedExperience.screenshots[selectedScreenshot]}
+                  alt={`${selectedExperience.title} screenshot ${selectedScreenshot + 1} of ${selectedExperience.screenshots.length}`}
+                  className="max-h-[62vh] w-full rounded-lg border border-gray-700 object-contain shadow-medium"
+                />
+                <button
+                  type="button"
+                  aria-label="Previous screenshot"
+                  disabled={selectedScreenshot === 0}
+                  onClick={() => setSelectedScreenshot((current) => Math.max(0, current - 1))}
+                  className="absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-dark-card/90 text-2xl text-white transition-colors hover:bg-primary disabled:cursor-not-allowed disabled:opacity-40"
+                >
+                  ←
+                </button>
+                <button
+                  type="button"
+                  aria-label="Next screenshot"
+                  disabled={selectedScreenshot === selectedExperience.screenshots.length - 1}
+                  onClick={() => setSelectedScreenshot((current) => Math.min(selectedExperience.screenshots.length - 1, current + 1))}
+                  className="absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-dark-card/90 text-2xl text-white transition-colors hover:bg-primary disabled:cursor-not-allowed disabled:opacity-40"
+                >
+                  →
+                </button>
+                <p className="mt-3 text-center text-sm text-gray-400">
+                  Screenshot {selectedScreenshot + 1} of {selectedExperience.screenshots.length}
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
@@ -1548,6 +1723,7 @@ function App() {
       <About />
       <Experience />
       <Projects />
+      <VibeCoding />
       <Skills />
       <Recognitions />
       <Contact />
